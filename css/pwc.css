@@ -1,0 +1,144 @@
+/* Colours */
+
+/* #9AA089 - willow grey-green - primary */
+/* #E9E4D4 - oat linen - header/footer background  */
+/* #7B5E45 - earth umber -  */
+
+/* #C4C8BA - moss grey - secondary backgrounds */
+/* #3C3A36 - charcoal ash - typography */
+
+/* DEBUGGING/DESIGN STYLES - REMOVE FOR PRODUCTION */
+
+img {
+  border: 1px solid black;
+  background-color: grey;
+}
+
+/* !DEBUGGING/DESIGN STYLES */
+
+/* Page layout */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+html {
+  background-color: #E9E4D4;
+}
+
+header {
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: #E9E4D4; /* oat linen */
+
+  padding: 1rem 3rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  overflow: hidden;
+}
+
+main {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  padding: 5rem 3rem 2rem;  
+}
+
+footer {
+  box-sizing: border-box;
+  background: #E9E4D4; /* oat linen */
+  padding: 1rem 3rem;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    padding: 0.5rem 1.5rem;
+  }
+
+  main {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+
+  footer {
+    padding: 0.5rem 1.5rem;
+  }
+
+  footer > .row {
+    flex-direction: column;
+  }
+}
+
+header > img#logo {
+  width: 300px;
+  height: 60px;
+}
+
+header > nav > a {
+  text-transform: uppercase;
+}
+
+footer  img.icon {
+  margin-right: 0.5rem;
+}
+
+/* Textual styles */
+
+body {
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: #3C3A36; /* charcoal ash */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Content styles */
+
+img.icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Utility classes */
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column; 
+}
+
+.row.space-between,
+.col.row.space-between {
+  justify-content: space-between;
+}
