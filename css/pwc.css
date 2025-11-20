@@ -108,7 +108,7 @@ footer {
   }
 
   footer {
-    padding: 0.5rem 1.5rem;
+    padding: 1.5rem 1.5rem;
   }
 
   footer > .row {
@@ -120,6 +120,12 @@ footer {
 header > img#logo {
   width: 300px;
   height: 60px;
+}
+
+@media screen and (max-width: 720px) {
+  header > img#logo {
+    width: 100px;
+  }
 }
 
 header > nav {
@@ -147,6 +153,20 @@ footer > .row {
 footer img.icon,
 footer svg.icon {
   margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 720px) {
+  footer > .row {
+    column-gap: 0.5rem;
+  }
+
+  footer p {
+    margin: 0.5rem 0;
+  }
+
+  footer h1, footer h2, footer h3 {
+    margin: 0.5rem 0;
+  }
 }
 
 .product {
@@ -204,12 +224,13 @@ svg.icon {
 
 .carousel {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .carousel > .items {
-  width: 500px;
+  width: 600px;
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -230,37 +251,33 @@ svg.icon {
 
 .carousel > .items > .item,
 .carousel > .items > .item > img {
-  width: 500px;
+  width: 600px;
   height: 100%;
 }
 
 .carousel > nav {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
-.carousel > nav > a > svg {
-  height: 20px;
-  width: 20px;
-}
-
-.carousel > nav > a > svg > circle {
-  fill: #E9E4D4;
-  stroke: #282828;
-  stroke-width: 2;
+.carousel > nav > a > img.thumb {
+  width: 100px;
   transition: all 0.2s ease;
 }
 
-.carousel > nav > a:hover > svg > circle,
-.carousel > nav > a:active > svg > circle {
-  fill: green;
-  stroke: #282828;
+.carousel > nav > a:hover > img.thumb,
+.carousel > nav > a:active > img.thumb {
+  filter: grayscale(1);
 }
 
 @media screen and (max-width: 720px) {
+  .carousel {
+    justify-content: flex-start;
+  }
+
   .carousel > .items {
     width: 300px;
   }
