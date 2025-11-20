@@ -5,7 +5,8 @@
 /* #7B5E45 - earth umber -  */
 
 /* #C4C8BA - moss grey - secondary backgrounds */
-/* #3C3A36 - charcoal ash - typography */
+/* #282828 - charcoal - heading typography */
+/* #3C3A36 - charcoal ash - body typography */
 
 /* DEBUGGING/DESIGN STYLES - REMOVE FOR PRODUCTION */
 
@@ -16,6 +17,40 @@ img {
 
 /* !DEBUGGING/DESIGN STYLES */
 
+/* Textual styles */
+
+body {
+  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: #3C3A36;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+  color: #282828;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 0.5rem;
+  }
+}
+
+a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  color: #282828;
+}
+
 /* Page layout */
 
 html, body {
@@ -23,8 +58,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  min-width: 100vw;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -34,12 +69,11 @@ html {
 header {
   box-sizing: border-box;
 
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 
-  background-color: #E9E4D4; /* oat linen */
+  background-color: #E9E4D4;
 
   padding: 1rem 3rem;
 
@@ -55,12 +89,12 @@ header {
 main {
   box-sizing: border-box;
   background-color: whitesmoke;
-  padding: 5rem 3rem 2rem;  
+  padding: 1rem 3rem 2rem;
 }
 
 footer {
   box-sizing: border-box;
-  background: #E9E4D4; /* oat linen */
+  background: #E9E4D4;
   padding: 1rem 3rem;
 }
 
@@ -70,7 +104,7 @@ footer {
   }
 
   main {
-    padding: 4rem 1.5rem 2rem 1.5rem;
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
   }
 
   footer {
@@ -79,6 +113,7 @@ footer {
 
   footer > .row {
     flex-direction: column;
+    column-gap: auto;
   }
 }
 
@@ -87,43 +122,51 @@ header > img#logo {
   height: 60px;
 }
 
-header > nav > a {
-  text-transform: uppercase;
+header > nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  font-size: large;
 }
 
-footer  img.icon {
+header > nav > a {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+header > nav > a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+footer > .row {
+  column-gap: 1.5rem;
+}
+
+footer img.icon,
+footer svg.icon {
   margin-right: 0.5rem;
 }
 
-/* Textual styles */
-
-body {
-  font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-  color: #3C3A36; /* charcoal ash */
+.product {
+  width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: bold;
-}
-
-a {
-  font-weight: 500;
-  text-decoration: none;
+.product > img {
+  width: 150px;
+  max-width: 150px;
 }
 
 /* Content styles */
 
-img.icon {
-  width: 32px;
-  height: 32px;
+img.icon,
+svg.icon {
+  width: 1rem;
+}
+
+svg.icon {
+  fill: #3C3A36;
 }
 
 /* Utility classes */
@@ -138,7 +181,92 @@ img.icon {
   flex-direction: column; 
 }
 
+.row.baseline {
+  align-items: baseline;
+}
+
+.row.vcenter,
+.col.hcenter {
+  align-items: center;
+}
+
+.col.vcenter,
+.row.hcenter {
+  justify-content: center;
+}
+
 .row.space-between,
-.col.row.space-between {
+.col.space-between {
   justify-content: space-between;
+}
+
+/* Carousel */
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel > .items {
+  width: 500px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel > .items::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel > .items > .item {
+  flex-shrink: 0;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+}
+
+.carousel > .items > .item,
+.carousel > .items > .item > img {
+  width: 500px;
+  height: 100%;
+}
+
+.carousel > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.carousel > nav > a > svg {
+  height: 20px;
+  width: 20px;
+}
+
+.carousel > nav > a > svg > circle {
+  fill: #E9E4D4;
+  stroke: #282828;
+  stroke-width: 2;
+  transition: all 0.2s ease;
+}
+
+.carousel > nav > a:hover > svg > circle,
+.carousel > nav > a:active > svg > circle {
+  fill: green;
+  stroke: #282828;
+}
+
+@media screen and (max-width: 720px) {
+  .carousel > .items {
+    width: 300px;
+  }
+
+  .carousel > .items > .item,
+  .carousel > .items > .item > img {
+    width: 300px;
+  }
 }
