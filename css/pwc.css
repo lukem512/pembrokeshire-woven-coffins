@@ -229,30 +229,10 @@ svg.icon {
   gap: 1rem;
 }
 
-.carousel > .items {
+.carousel > img.main {
   width: 600px;
+  height: auto;
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.carousel > .items::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel > .items > .item {
-  flex-shrink: 0;
-  height: 100%;
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
-}
-
-.carousel > .items > .item,
-.carousel > .items > .item > img {
-  width: 600px;
-  height: 100%;
 }
 
 .carousel > nav {
@@ -263,13 +243,13 @@ svg.icon {
   gap: 0.5rem;
 }
 
-.carousel > nav > a > img.thumb {
+.carousel > nav > img.thumb {
   width: 100px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.carousel > nav > a:hover > img.thumb,
-.carousel > nav > a:active > img.thumb {
+.carousel > nav > img.active {
   filter: grayscale(1);
 }
 

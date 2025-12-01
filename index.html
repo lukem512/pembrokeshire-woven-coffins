@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/pwc.css" />
+
+    <!-- Scripts -->
+    <script src="js/carousel.js" defer></script>
   </head>
   <body>  
     <header>
@@ -34,29 +37,13 @@
             We grow much of our material at our 16-acre site which we also manage for wildlife and sustainable agriculture.
             Whilst many clients ... local funeral directors ... We are also more than happy to post  throughout the UK.
           </p>
-          
+
           <div class="carousel">
-            <div class="items">
-              <div class="item" id="hero-carousel-item-1">
-                <img alt="Liv, the founder of Pembrokeshire Woven Coffins, making a coffin" src="img/weave-1.jpg" />
-              </div>
-              <div class="item" id="hero-carousel-item-2">
-                <img alt="A coffin" src="img/on-wall.jpg" />
-              </div>
-              <div class="item" id="hero-carousel-item-3">
-                <img alt="Coffin in woodland" src="img/willow-bundles.jpg" />
-              </div>
-            </div>
+            <img class="main" alt="Liv, the founder of Pembrokeshire Woven Coffins, making a coffin" src="img/weave-1.jpg" />
             <nav aria-label="Carousel navigation">
-              <a href="#hero-carousel-item-1">
-                <img class="thumb" src="img/weave-1.jpg" />
-              </a>
-              <a href="#hero-carousel-item-2">
-                <img class="thumb" src="img/on-wall.jpg" />
-              </a>
-              <a href="#hero-carousel-item-3">
-                <img class="thumb" src="img/willow-bundles.jpg" />
-              </a>
+              <img class="thumb active" alt="Liv, the founder of Pembrokeshire Woven Coffins, making a coffin" src="img/weave-1.jpg" />
+              <img class="thumb" alt="A coffin" src="img/on-wall.jpg" />
+              <img class="thumb" alt="Bundles of willow" src="img/willow-bundles.jpg" />
             </nav>
           </div>
         </div>
@@ -131,4 +118,10 @@
       </div>
     </footer>
   </body>
+  <script>
+    // Initialise carousels on the page
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.carousel').forEach(carousel);
+    });
+  </script>
 </html>
