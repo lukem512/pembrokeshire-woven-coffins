@@ -14,8 +14,6 @@ function carousel(el) {
     if (el && el.classList.contains('carousel')) {
       const mainEl = el.querySelector('img.main');
       const images = el.querySelectorAll('img');
-
-      console.log(mainEl)
       
       // Add click event listener to each image
       images.forEach((img, index) => {
