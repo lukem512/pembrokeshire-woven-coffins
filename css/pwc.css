@@ -196,7 +196,8 @@ main section:nth-of-type(even) {
     column-gap: 3rem; 
   }
 
-  .two-col p {
+  .two-col p,
+  .two-col img {
     max-width: 65ch;
   }
 }
@@ -208,7 +209,8 @@ main section:nth-of-type(even) {
     column-gap: 3rem; 
   }
 
-  .two-col-lg p {
+  .two-col-lg p,
+  .two-col-lg img {
     max-width: 65ch;
   }
 }
@@ -334,6 +336,11 @@ svg.icon {
 
 svg.icon {
   fill: #3C3A36;
+}
+
+img.secondary {
+  max-width: 400px;
+  width: 100%;
 }
 
 /* Utility classes */
