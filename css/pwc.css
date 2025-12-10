@@ -26,12 +26,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-style: bold;
   color: #282828;
-  padding-top: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+
 }
 
 @media screen and (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0;
   }
 }
 
@@ -130,6 +132,12 @@ header > nav {
   font-size: large;
 }
 
+@media screen and (max-width: 768px) {
+  header > nav {
+    display: none !important;
+  }
+}
+
 header > nav > a {
   text-transform: uppercase;
   text-decoration: none;
@@ -139,6 +147,14 @@ header > nav > a {
 header > nav > a:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
+}
+
+footer {
+  background: linear-gradient(
+    to bottom,
+    #E9E4D4 0%,
+    #E3DDCC 100%
+  );
 }
 
 footer > .row {
@@ -164,6 +180,55 @@ footer svg.icon {
   }
 }
 
+main section {
+  margin: 3rem 0;
+}
+
+main section:nth-of-type(even) {
+  background-color: #F1EEE6;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .two-col {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem; 
+  }
+
+  .two-col p {
+    max-width: 65ch;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .two-col-lg {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem; 
+  }
+
+  .two-col-lg p {
+    max-width: 65ch;
+  }
+}
+
+p {
+  line-height: 1.7;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+section .lead {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #7B5E45;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .product {
   width: 100%;
 }
@@ -183,9 +248,18 @@ footer svg.icon {
   background-color: transparent;
 }
 
+.section-divider {
+  height: 40px;
+  background: url('../img/fleuron.svg') no-repeat center;
+  background-size: 120px;
+  opacity: 0.2;
+  margin: 3rem 0;
+}
+
 .badges {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.5rem;
   font-weight: 500;
@@ -217,6 +291,7 @@ footer svg.icon {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
