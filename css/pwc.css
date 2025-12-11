@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
 }
 
@@ -189,6 +189,16 @@ main section:nth-of-type(even) {
   padding: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  main section {
+    margin: 1.5rem 0;
+  }
+
+  main section:nth-of-type(even) {
+    padding: 0.5rem 0.75rem 1rem 0.75rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .two-col {
     display: flex;
@@ -231,8 +241,25 @@ section .lead {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .section .lead {
+    margin-bottom: 0.75rem;
+  }
+}
+
 .product {
   width: 100%;
+  box-sizing: border-box;
+  background-color: #EEF0EA;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    padding: 0.5rem 0.75rem 1rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .fleuron {
@@ -243,14 +270,6 @@ section .lead {
   background: url('../img/fleuron.svg') no-repeat center;
   background-size: contain;
   background-color: transparent;
-}
-
-.section-divider {
-  height: 40px;
-  background: url('../img/fleuron.svg') no-repeat center;
-  background-size: 120px;
-  opacity: 0.2;
-  margin: 3rem 0;
 }
 
 .badges {
