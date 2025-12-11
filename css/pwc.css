@@ -235,11 +235,6 @@ section .lead {
   width: 100%;
 }
 
-.product > img {
-  width: 150px;
-  max-width: 150px;
-}
-
 .fleuron {
   width: 100%;
   height: 80px;
