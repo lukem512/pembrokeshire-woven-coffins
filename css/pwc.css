@@ -273,14 +273,13 @@ section .lead {
 .carousel {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 1rem;
 }
 
 .carousel > img.main {
-  width: 600px;
   height: auto;
   display: flex;
+  width: 100%;
 }
 
 .carousel > nav {
