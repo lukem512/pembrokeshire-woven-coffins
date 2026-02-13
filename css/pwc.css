@@ -222,9 +222,9 @@ main section:nth-of-type(even) {
 
 @media screen and (min-width: 1180px) {
   .two-col-lg {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
   }
 
   .two-col-lg p,
