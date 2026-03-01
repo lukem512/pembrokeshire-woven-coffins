@@ -1,1 +1,2 @@
 [] Update nav .active when scrolling
+[] Optimise images for web

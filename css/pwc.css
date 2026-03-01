@@ -39,9 +39,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-style: wavy;
+  text-decoration: none;
   color: #282828;
+}
+
+.primary {
+  color: #556450 !important;
 }
 
 /* Page layout */
@@ -88,26 +91,29 @@ header {
 main {
   box-sizing: border-box;
   background-color: whitesmoke;
-  padding: 1rem 3rem 2rem;
+  padding: 0 0 2rem;
 }
 
 footer {
   box-sizing: border-box;
   background: #E9E4D4;
   padding: 1rem 3rem;
+  background-image: url(../img/wreath.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -150px left -100px;
 }
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2rem;
   }
 
   main {
-    padding: 0.5rem 1.5rem 2rem 1.5rem;
+    padding: 0 0 2rem;
   }
 
   footer {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 2rem;
   }
 
   footer > .row {
@@ -185,14 +191,6 @@ header > nav > a:focus {
   color: #EFF0EE;
 }
 
-footer {
-  background: linear-gradient(
-    to bottom,
-    #E9E4D4 0%,
-    #E3DDCC 100%
-  );
-}
-
 footer > .row {
   column-gap: 1.5rem;
 }
@@ -217,27 +215,43 @@ footer svg.icon {
 }
 
 main section:not(:first-of-type) {
-  margin: 3rem 0;
+  margin-top: 2rem;
+}
+
+main section {
+  padding: 2rem 4rem;
+}
+
+main section.hero {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 4rem;
+  background-image: url('../img/clouds.jpg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  object-position: center;
+  max-height: 650px;
 }
 
 main section.muted {
   background-color: #F1EEE6;
-  padding: 1.5rem;
 }
 
 main section.accent {
   background-color: #9AA089;
-  padding: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  main section {
-    margin: 1.5rem 0;
+  main section:not(:first-of-type) {
+    margin-top: 2rem;
   }
 
-  main section.muted,
-  main section.accent {
-    padding: 0.5rem 0.75rem 1rem 0.75rem;
+  main section {
+    padding: 2rem 2rem;
+  }
+
+  main section.hero {
+    padding: 2rem;
   }
 }
 
@@ -430,6 +444,11 @@ img.circle {
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1;
+}
+
+img.transparent {
+  background-color: transparent;
+  border: none;
 }
 
 /* Utility classes */
