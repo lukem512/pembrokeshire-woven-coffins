@@ -264,7 +264,7 @@ main section.accent {
 
   .two-one-col {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 2rem 3rem;
   }
 
@@ -278,7 +278,13 @@ main section.accent {
   .two-col-lg {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 2srem 3rem;
+    gap: 2rem 3rem;
+  }
+
+  .two-one-col-lg {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem 3rem;
   }
 
   .two-col-lg p,
@@ -314,7 +320,6 @@ section .lead {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 2rem;
 }
 
 .team-photos > img {
@@ -330,11 +335,13 @@ section .lead {
   margin-left: -100px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1180px) {
   .team-photos {
     padding-top: 1.5rem;
   }
+}
 
+@media screen and (max-width: 768px) {
   .team-photos > img {
     width: 200px;
     height: 200px;
