@@ -303,6 +303,25 @@ section .lead {
   }
 }
 
+.team-photos {
+  display: flex;
+  flex-direction: row;
+  padding-left: 4rem;
+}
+
+.team-photos > img {
+  width: 280px;
+  height: 280px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: none;
+  box-shadow: -3px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-photos > img:nth-child(n+2) {
+  margin-left: -100px;
+}
+
 .product {
   width: 100%;
   box-sizing: border-box;
