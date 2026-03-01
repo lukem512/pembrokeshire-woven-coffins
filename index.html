@@ -10,12 +10,34 @@
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/pwc.css" />
 
     <!-- Scripts -->
     <script src="js/img.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#556450">
+    <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#556450">
 
     <!-- Schema -->
     <script type="application/ld+json">
@@ -50,38 +72,30 @@
   </head>
   <body>  
     <header>
-      <img id="logo" src="img/logo.svg" alt="Logo showing willow leaf" />
+      <div class="logo">
+        <img src="img/logo.svg" alt="Pembrokeshire Woven Coffins logo" />
+      </div>
       <nav class="row baseline" aria-label="Main website navigation">
-        <a href="#about">About</a>
+        <a href="#about" class="active">About</a>
         <a href="#materials">Materials</a>
-        <a href="#range">Coffins</a>
+        <a href="#range">Products</a>
         <a href="#process">Process</a>
         <a class="btn" href="#contact">Contact</a>
       </nav>
     </header>
-    <div class="fleuron"></div>
     <main>
-      <h1>Pembrokeshire Woven Coffins</h1>
-      <span>Beautiful, sustainable willow coffins. Handmade in Pembrokeshire, West Wales.</span>
-
       <section>
-        <h2 id="about">About Pembrokeshire Woven Coffins</h2>
-        <p class="lead">Grown and woven by hand here in Wales</p>
+        <h2 id="about">Pembrokeshire Woven Coffins</h2>
+        <p class="lead">Grown and crafted by hand here in Wales</p>
         <div class="two-col-lg">
           <div>
             <p>
               Pembrokeshire Woven Coffins was founded to offer families a meaningful alternative to mass-produced coffins.
-              We believe that a coffin can be simple, beautiful, and respectful of the environment.
+              We believe that a coffin can be a beautiful item, handmade with care and with respect of the environment.
             </p>
 
             <p>
               Each coffin is woven by hand by Liv, an experienced basket maker and tutor, using willow grown on our small farm in Pembrokeshire.
-            </p>
-
-            <p>
-              Liv came to weaving coffins through a love of people, the natural world, and her love for willow basketry.
-              She hopes to create a calm and supportive space for people to feel connected to their loved ones by being as involved in the coffin making process as they wish.
-              From planting or harvesting willow, to design ideas and participating in the weaving, families and friends are welcome to visit.
             </p>
   
             <p>
@@ -106,8 +120,22 @@
           </div>
         </div>
       </section>
+
+      <section class="accent">
+        <h2 id="team">Meet our Team</h2>
+        <p>
+          After learning to make willow baskets, Liv quickly became obsessed with weaving and growing willow.
+          She came to weaving coffins through a desire to work within her community, helping people through difficult times, whilst making a positive impact on the planet.
+          Pembrokeshire Woven Coffins combines all these passions into one sustainable and loving project.
+        </p>
+        <p>
+          Liv hopes to create a calm and supportive space for people to feel connected to their loved ones by being as involved in the coffin making process as they wish, creating some space and compassion for people during a difficult and stressful time.
+          From planting or harvesting willow, to design ideas and participating in the weaving, families and friends are welcome to visit.
+        </p>
+        <!-- <img class="circle secondary" src="img/weaving-coffin-by-hand.jpg" alt="Liv, the founder of Pembrokeshire Woven Coffins"> -->
+      </section>
       
-      <section>
+      <section class="muted">
         <h2 id="materials">Sustainable Materials</h2>
         <p class="lead">
           All of our coffins are made using natural, renewable materials chosen for
@@ -206,7 +234,7 @@
       </section>
 
       <section>
-        <h2 id="range">Our Handmade Willow Coffins</h2>
+        <h2 id="range">Our Products</h2>
         <p class="lead">
           We offer curved willow coffins in a small, carefully considered range of
           natural finishes.
@@ -274,7 +302,8 @@
               <span class="amount">£850</span> for any size.
             </p>
 
-            <!-- <img class="secondary" src="img/coffin-brown-white-willow.png" alt="Brown and white willow oval coffin handmade in Pembrokeshire" /> -->
+            <!-- <img class="secon
+             dary" src="img/coffin-brown-white-willow.png" alt="Brown and white willow oval coffin handmade in Pembrokeshire" /> -->
 
             <script type="application/ld+json">
               {
@@ -329,7 +358,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="muted">
         <h2 id="process">Our Process</h2>
         <p>
           We aim to make ordering a coffin as simple and reassuring as possible.
@@ -442,7 +471,7 @@
         </script>
       </section>
 
-      <section>
+      <section class="accent">
         <h2 id="contact">Contact us</h2>
         <p>
           We're here to help with any questions or to discuss your requirements.

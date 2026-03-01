@@ -1,10 +1,11 @@
 /* Colours */
 
-/* #9AA089 - willow grey-green - primary */
-/* #E9E4D4 - oat linen - header/footer background  */
-/* #7B5E45 - earth umber - primary accent, lead text */
-
-/* #C4C8BA - moss grey - secondary backgrounds */
+/* #556450 - dusky green - primary */
+/* #C4C8BA - moss grey - primary accent*/
+/* #EFF0EE - off-white - logo text, body background */
+/* #9AA089 - willow grey-green - accent background */
+/* #F1EEE6 - light oat - muted background */
+/* #E9E4D4 - oat linen - footer background  */
 /* #282828 - charcoal - heading typography */
 /* #3C3A36 - charcoal ash - body typography */
 
@@ -24,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-style: bold;
   color: #282828;
   margin: 0;
   padding: 1rem 0;
@@ -56,11 +56,11 @@ html, body {
 }
 
 html {
-  background-color: #E9E4D4;
+  background-color: #EFF0EE;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #EFF0EE;
 }
 
 header {
@@ -70,7 +70,8 @@ header {
   left: 0;
   width: 100%;
 
-  background-color: #E9E4D4;
+  background-color: #556450;
+  color: #EFF0EE;
 
   padding: 1rem 3rem;
 
@@ -81,6 +82,7 @@ header {
   flex-wrap: nowrap;
 
   overflow: hidden;
+  border-bottom: 12px solid #C4C8BA;
 }
 
 main {
@@ -114,7 +116,20 @@ footer {
   }
 }
 
-header > img#logo {
+header > .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > .logo > h1 {
+  font-family: "Aref Ruqaa Ink", serif;
+  font-weight:200;
+  color: #EFF0EE;
+}
+
+header > .logo > img {
   max-width: 300px;
   height: 60px;
   background-color: transparent;
@@ -122,8 +137,12 @@ header > img#logo {
 }
 
 @media screen and (max-width: 768px) {
-  header > img#logo {
-    width: 100px;
+  header > .logo > h1 {
+    font-size: 1.25rem;
+  }
+
+  header > .logo > img {
+    max-width: 200px;
   }
 }
 
@@ -145,16 +164,25 @@ header > nav > a {
   font-weight: 500;
   letter-spacing: 0.1rem;
   text-decoration: none;
+  color: #9AA089;
 }
 
-header > nav > a:hover,
-header > nav > a:focus {
-  border-bottom: 2px solid #7B5E45;
+header > nav > a.btn {
+  color: #556450;
+  background-color: #EFF0EE;
+}
+
+header > nav > a.btn:hover {
+  background-color: #556450;
+  border-color: #EFF0EE;
+  color: #EFF0EE;
 }
 
 header > nav > a:active,
-header > nav > a.active {
-  border-bottom: 2px solid #3C3A36;
+header > nav > a.active,
+header > nav > a:hover,
+header > nav > a:focus {
+  color: #EFF0EE;
 }
 
 footer {
@@ -188,12 +216,17 @@ footer svg.icon {
   }
 }
 
-main section {
+main section:not(:first-of-type) {
   margin: 3rem 0;
 }
 
-main section:nth-of-type(even) {
+main section.muted {
   background-color: #F1EEE6;
+  padding: 1.5rem;
+}
+
+main section.accent {
+  background-color: #9AA089;
   padding: 1.5rem;
 }
 
@@ -202,7 +235,8 @@ main section:nth-of-type(even) {
     margin: 1.5rem 0;
   }
 
-  main section:nth-of-type(even) {
+  main section.muted,
+  main section.accent {
     padding: 0.5rem 0.75rem 1rem 0.75rem;
   }
 }
@@ -244,7 +278,7 @@ p:first-child {
 section .lead {
   font-family: "Playfair Display", serif;
   font-style: italic;
-  color: #7B5E45;
+  color: #9AA089;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -278,7 +312,7 @@ section .lead {
 .product .price .amount {
   font-weight: 500;
   font-size: 1.25rem;
-  color: #7B5E45;
+  color: #556450;
 }
 
 .fleuron {
@@ -296,17 +330,18 @@ a.btn {
   padding: 0.45rem 1.5rem;
   font-family: "Playfair Display", serif;
   font-weight: 500;
+  letter-spacing: 1.3px;
   text-decoration: none;
-  color: white;
-  background-color: #7B5E45;
+  color: #EEF0EA;
+  background-color: #556450;
   transition: all 0.2s ease;
-  border: 2px solid #7B5E45
+  border: 2px solid #556450
 }
 
 a.btn:hover {
-  background-color: whitesmoke;
-  border: 2px solid #7B5E45;
-  color: #7B5E45;
+  background-color: #EEF0EA;
+  border: 2px solid #556450;
+  color: #556450;
   text-decoration: none;
 }
 
@@ -389,6 +424,12 @@ svg.icon {
 img.secondary {
   max-width: 400px;
   width: 100%;
+}
+
+img.circle {
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
 }
 
 /* Utility classes */
