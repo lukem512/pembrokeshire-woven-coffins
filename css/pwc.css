@@ -456,6 +456,8 @@ section.product img.product {
   padding-bottom: 1rem;
   border-left: 2px solid #C4C8BA;
   transition: background-color 0.2s ease;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 }
 
 .faq:not(:last-of-type) {
