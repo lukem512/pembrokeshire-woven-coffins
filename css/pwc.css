@@ -469,10 +469,15 @@ section.product.small > img.product {
 
 section.material {
   display: flex;
-  flex-direction: col;
+  flex-direction: column;
   border: 2px solid #C4C8BA;
+  background: #C4C8BA;
   border-radius: 0.4rem;
   padding: 1.5rem;
+}
+
+section.material.faq:not(:last-of-type) {
+  margin-bottom: 2rem;
 }
 
 /* FAQs */
