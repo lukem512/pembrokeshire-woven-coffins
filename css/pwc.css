@@ -395,8 +395,12 @@ section.product {
 }
 
 @media screen and (max-width: 768px) {
-  section.product {
+  section.product:not(.small) {
     flex-direction: column-reverse;
+  }
+
+  section.product.small {
+    flex-direction: column;
   }
 }
 
@@ -432,6 +436,13 @@ section.product img.product {
   border-top-right-radius: 0.4rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0.4rem;
+}
+
+section.product.small > img.product {
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 @media screen and (max-width: 768px) {
