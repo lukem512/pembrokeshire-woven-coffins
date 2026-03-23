@@ -508,6 +508,10 @@ section.material:not(:last-of-type) {
   background-color: #E9E4D4;
 }
 
+.faq > h3 {
+  font-size: 1.2rem;
+}
+
 .faq > p {
   margin: 0;
 }
