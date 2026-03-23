@@ -465,6 +465,16 @@ section.product.small > img.product {
   margin-top: 0 !important;
 }
 
+/* Materials */
+
+section.material {
+  display: flex;
+  flex-direction: col;
+  border: 2px solid #C4C8BA;
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+}
+
 /* FAQs */
 
 .faq {
