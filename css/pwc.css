@@ -455,10 +455,15 @@ section.product img.product {
   padding-left: 2rem;
   padding-bottom: 1rem;
   border-left: 2px solid #C4C8BA;
+  transition: background-color 0.2s ease;
 }
 
 .faq:not(:last-of-type) {
   margin-bottom: 2rem;
+}
+
+.faq:hover {
+  background-color: #E9E4D4;
 }
 
 .faq > p {
