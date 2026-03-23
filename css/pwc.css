@@ -450,10 +450,19 @@ a.btn:hover {
 .faq {
   padding-left: 2rem;
   border-left: 2px solid #C4C8BA;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.faq:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.faq:hover {
+  border-color: #C4C8BA;
 }
 
 .faq > p {
-  margin: 0;
+  margin-top: 0;
 }
 
 /* Carousel */
