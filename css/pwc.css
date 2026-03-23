@@ -458,6 +458,7 @@ section.product img.product {
   transition: background-color 0.2s ease;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
+  padding-right: 1.5rem;
 }
 
 .faq:not(:last-of-type) {
