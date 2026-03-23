@@ -394,13 +394,13 @@ section.product {
   flex-direction: row;
 }
 
+section.product.small {
+  flex-direction: column;
+}
+
 @media screen and (max-width: 768px) {
   section.product:not(.small) {
     flex-direction: column-reverse;
-  }
-
-  section.product.small {
-    flex-direction: column;
   }
 }
 
@@ -427,11 +427,14 @@ section.product .price .amount {
   font-size: 1.25rem;
 }
 
-section.product img.product {
-  max-width: 45%;
+img.product {
   object-fit: cover;
   height: auto;
   border: 0;
+}
+
+section.product > img.product {
+  max-width: 45%;
   border-top-left-radius: 0;
   border-top-right-radius: 0.4rem;
   border-bottom-left-radius: 0;
@@ -439,6 +442,8 @@ section.product img.product {
 }
 
 section.product.small > img.product {
+  width: 100%;
+  max-width: none;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
   border-bottom-left-radius: 0;
