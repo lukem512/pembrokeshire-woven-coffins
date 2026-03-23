@@ -476,7 +476,7 @@ section.material {
   padding: 1.5rem;
 }
 
-section.material.faq:not(:last-of-type) {
+section.material:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
