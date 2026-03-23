@@ -445,6 +445,17 @@ a.btn:hover {
   margin-bottom: 1.5rem;
 }
 
+/* FAQs */
+
+.faq {
+  padding-left: 2rem;
+  border-left: 2px solid #C4C8BA;
+}
+
+.faq > p {
+  margin: 0;
+}
+
 /* Carousel */
 
 .carousel {
