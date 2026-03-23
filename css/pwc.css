@@ -479,7 +479,7 @@ a.btn:hover {
 }
 
 .carousel > nav > img.active {
-  filter: grayscale(1);
+  border: 2px solid #556450;
 }
 
 @media screen and (max-width: 768px) {
