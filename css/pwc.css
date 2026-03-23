@@ -34,6 +34,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
 @media screen and (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
     padding: 1rem 0;
@@ -466,6 +470,10 @@ section.product.small > img.product {
 }
 
 /* Materials */
+
+h2#materials {
+  margin-bottom: 1rem;
+}
 
 section.material {
   display: flex;
