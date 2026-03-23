@@ -15,5 +15,5 @@ The following table gives recommendations.
 | Image type | Width (px) | Height (px) | Format | Filesize (kB) |
 |---|---|---|---|---|
 | Landscape | 1246 | 935 | JPG | 600 |
-| Portrait | - | - | JPG | 600 |
+| Portrait | 935 | 1246 | JPG | 600 |
 | Icon | 48px | 48px | SVG | 80 |
