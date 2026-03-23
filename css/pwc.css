@@ -11,10 +11,6 @@
 
 /* Textual styles */
 
-html {
-  background-color: #556450;
-}
-
 body {
   font-family: "IBM Plex Sans", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
@@ -66,7 +62,7 @@ html, body {
 }
 
 html {
-  background-color: #EFF0EE;
+  background-color: #556450;
 }
 
 body {
