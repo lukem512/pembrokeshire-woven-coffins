@@ -495,7 +495,7 @@ section.material:not(:last-of-type) {
 }
 
 @media screen and (max-width: 768px) {
-  section.material .col:nth-of-type(2) {
+  .mt-sm {
     margin-top: 2rem;
   }
 }
