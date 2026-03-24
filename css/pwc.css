@@ -475,6 +475,10 @@ section.product.small > img.product {
   margin-top: 0 !important;
 }
 
+.two-col > section.product.small:last-of-type {
+  margin-bottom: 0 !important;
+}
+
 /* Materials */
 
 h2#materials {
