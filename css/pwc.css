@@ -235,6 +235,12 @@ main section.hero {
   max-height: 650px;
 }
 
+@media screen and (max-width: 768px) {
+  main section.hero {
+    max-height: none;
+  }
+}
+
 main section.muted {
   background-color: #F1EEE6;
 }
