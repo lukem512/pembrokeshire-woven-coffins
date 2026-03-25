@@ -670,6 +670,11 @@ img.hero-insert {
   } 
 }
 
+img.badge {
+  width: 150px;
+  height: auto;
+}
+
 /* Utility classes */
 
 .row {
