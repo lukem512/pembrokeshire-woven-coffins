@@ -65,7 +65,8 @@ q {
   color: var(--color-primary-accent);
   font-style: italic;
   font-size: 1.75rem;
-  padding: 4rem;
+  margin: 4rem;
+  display: block;
 }
 
 .primary {
