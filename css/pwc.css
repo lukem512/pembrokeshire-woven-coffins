@@ -702,6 +702,14 @@ img.badge {
   justify-content: space-between;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap {
+  gap: 1rem;
+}
+
 .d-sm {
   display: unset;
 }
