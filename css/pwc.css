@@ -327,16 +327,16 @@ a.btn {
   font-weight: 500;
   letter-spacing: 1.3px;
   text-decoration: none;
-  color: #EEF0EA;
+  color: #9AA089;
   background-color: #556450;
   transition: all 0.2s ease;
   border: 2px solid #556450
 }
 
 a.btn:hover {
-  background-color: #EEF0EA;
-  border: 2px solid #556450;
-  color: #556450;
+  background-color: #9AA089;
+  color: #282828;
+  border-color: #282828;
   text-decoration: none;
 }
 
