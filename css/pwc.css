@@ -59,8 +59,16 @@ a {
   color: var(--color-heading);
 }
 
+q {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-heading);
+  font-style: italic;
+  font-size: 1.75rem
+}
+
 .primary {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
 }
 
 /* Page layout */
