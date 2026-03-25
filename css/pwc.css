@@ -416,7 +416,7 @@ section.product {
   border-radius: 0.4rem;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
 }
 
 section.product.small {
