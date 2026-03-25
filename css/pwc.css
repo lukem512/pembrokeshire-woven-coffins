@@ -9,6 +9,12 @@
 /* #282828 - charcoal - heading typography */
 /* #3C3A36 - charcoal ash - body typography */
 
+/* Screen breakpoints */
+
+/* small - 360px - mobiles */
+/* medium - 768px - tablets, small laptops */
+/* large - 1180px - desktops, large laptops */
+
 /* Textual styles */
 
 body {
@@ -227,11 +233,14 @@ main section {
 main section.hero {
   margin-left: 0;
   margin-right: 0;
-  padding: 4rem;
   background-image: url('../img/clouds.jpg');
   object-fit: cover;
   background-repeat: no-repeat;
   object-position: center;
+}
+
+main section.primary {
+  background-color: #556450;
 }
 
 main section.muted {
@@ -271,7 +280,7 @@ main section.accent {
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1181px) {
   .two-col-lg {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -366,7 +375,7 @@ a.btn:hover {
   margin-left: -100px;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1181px) {
   .team-photos {
     padding-top: 1.5rem;
   }
@@ -611,6 +620,34 @@ img.transparent {
 }
 
 /* Utility classes */
+
+.d-sm {
+  display: block;
+}
+
+.d-sm-none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .d-md {
+    display: block;
+  }
+
+  .d-md-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .d-lg {
+    display: block;
+  }
+
+  .d-lg-none {
+    display: none;
+  }
+}
 
 .row {
   display: flex;
