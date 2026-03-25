@@ -1,19 +1,4 @@
-/* Colours */
-
-/* #556450 - dusky green - primary */
-/* #C4C8BA - moss grey - primary accent*/
-/* #EFF0EE - off-white - logo text, body background */
-/* #9AA089 - willow grey-green - accent background */
-/* #F1EEE6 - light oat - muted background */
-/* #E9E4D4 - oat linen - footer background  */
-/* #282828 - charcoal - heading typography */
-/* #3C3A36 - charcoal ash - body typography */
-
-/* Screen breakpoints */
-
-/* small - 360px - mobiles */
-/* medium - 768px - tablets, small laptops */
-/* large - 1180px - desktops, large laptops */
+/* Brand colours, fonts and styles */
 
 :root {
   --color-primary: #556450;
@@ -545,7 +530,7 @@ section.material:not(:last-of-type) {
 }
 
 .faq:hover {
-  background-color: var(--color-muted);
+  background-color: var(--color-footer-background);
 }
 
 .faq > h3 {
