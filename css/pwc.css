@@ -671,8 +671,10 @@ img.hero-insert {
 }
 
 img.badge {
-  width: 150px;
+  width: 100px;
   height: auto;
+  background-color: transparent;
+  border: none;
 }
 
 /* Utility classes */
