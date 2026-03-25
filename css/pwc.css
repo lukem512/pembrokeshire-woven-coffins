@@ -618,12 +618,6 @@ section.material:not(:last-of-type) {
     overflow-y: auto;
     overflow-x: hidden;
   }
-
-  .carousel > nav > img.thumb {
-    width: 100px;
-    height: 100px;
-    flex-shrink: 0;
-  }
 }
 
 /* Content styles */
