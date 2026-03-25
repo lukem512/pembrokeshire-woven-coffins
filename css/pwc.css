@@ -248,18 +248,18 @@ main section.hero {
   object-position: center;
 }
 
-/* main section.hero {
-  padding: 2rem;
-} */
+main section.hero {
+  padding: 2rem; /* Less vertical padding to bring content immediately into view */
+}
 
 @media screen and (min-width: 768px) {
   main section {
     padding: 4rem;
   }
 
-  /* main section.hero {
+  main section.hero {
     padding: 4rem;
-  } */
+  }
 }
 
 main section.primary {
@@ -407,7 +407,7 @@ section.product {
   border-radius: 0.4rem;
 
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
 }
 
 section.product.small {
@@ -611,6 +611,12 @@ img.circle {
 img.transparent {
   background-color: transparent;
   border: none;
+}
+
+img.hero-insert {
+  max-width: 400px;
+  width: 100%;
+  border-width: 12px;
 }
 
 /* Utility classes */
