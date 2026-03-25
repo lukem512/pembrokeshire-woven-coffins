@@ -589,7 +589,7 @@ section.material:not(:last-of-type) {
   opacity: 0.6;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1180px) {
   .carousel {
     flex-direction: row;
     align-items: flex-start;
