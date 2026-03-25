@@ -633,15 +633,15 @@ img.transparent {
 }
 
 img.hero-insert {
-  max-width: 400px;
   width: 100%;
   border-width: 12px;
+  box-sizing: border-box;
 }
 
-img.expand {  
-  max-width: none;
-  width: 100%;
-  box-sizing: border-box;
+@media screen and (min-width: 768px) {
+  img.hero-insert {
+    max-width: 400px;
+  } 
 }
 
 /* Utility classes */
